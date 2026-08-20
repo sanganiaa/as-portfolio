@@ -18,8 +18,7 @@ export function LinkCube({
   /* shelf angle: outer cubes angle inward more */
   const ry0 = (((total - 1) / 2 - index) * 11).toFixed(1) + "deg";
 
-  /* grab + spring-back drag (the whole block moves, satellites get
-     nudged out of the way because colliders are read live) */
+  /* grab + spring-back drag */
   useEffect(() => {
     if (!hasPointer || reduceMotion) return;
     const root = rootRef.current!;

@@ -10,23 +10,18 @@ export interface LinkItem {
   svg: string;
 }
 
-export interface SatelliteConfig {
-  count: number;
-  sizeMin: number;
-  sizeMax: number;
-  depthMin: number;
-  depthMax: number;
-  drift: number;
-  spinIdle: number;
-  pushForce: number;
-  stirForce: number;
-  restitution: number;
-  damping: number;
-  maxSpeed: number;
-  rippleStrength: number;
-  blockCollide: boolean;
-  draggable: boolean;
-  clickSpin: boolean;
+export interface GridScanConfig {
+  linesColor: string;
+  scanColor: string;
+  gridScale: number;
+  lineThickness: number;
+  scanOpacity: number;
+  bloomIntensity: number;
+  chromaticAberration: number;
+  noiseIntensity: number;
+  sensitivity: number;
+  scanDuration: number;
+  scanDelay: number;
 }
 
 export interface Config {
@@ -34,7 +29,7 @@ export interface Config {
   nameLines: string[];
   cycleMs: number;
   links: LinkItem[];
-  satellites: SatelliteConfig;
+  gridScan: GridScanConfig;
   about: {
     eyebrow: string;
     heading: string;
@@ -96,23 +91,18 @@ export const CONFIG: Config = {
     },
   ],
 
-  satellites: {
-    count: 26,
-    sizeMin: 14,
-    sizeMax: 30,
-    depthMin: 60,
-    depthMax: 320,
-    drift: 0.25,
-    spinIdle: 0.3,
-    pushForce: 1.6,
-    stirForce: 0.1,
-    restitution: 0.9,
-    damping: 0.995,
-    maxSpeed: 6,
-    rippleStrength: 24,
-    blockCollide: true,
-    draggable: true,
-    clickSpin: true,
+  gridScan: {
+    linesColor: "#241a3d",
+    scanColor: "#c9b6ff",
+    gridScale: 0.12,
+    lineThickness: 1,
+    scanOpacity: 0.35,
+    bloomIntensity: 0.5,
+    chromaticAberration: 0.0015,
+    noiseIntensity: 0.015,
+    sensitivity: 0.5,
+    scanDuration: 3,
+    scanDelay: 3.5,
   },
 
   about: {

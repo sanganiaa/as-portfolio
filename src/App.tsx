@@ -3,6 +3,7 @@ import { CONFIG } from "./config.ts";
 import { NamePrism } from "./components/NamePrism.tsx";
 import { LinkCube } from "./components/LinkCube.tsx";
 import { AboutModal } from "./components/AboutModal.tsx";
+import { GridScan } from "./components/GridScan.tsx";
 import { useSceneLoop } from "./hooks/useSceneLoop.ts";
 
 export default function App() {
@@ -11,7 +12,6 @@ export default function App() {
   const sceneWrapRef = useRef<HTMLElement>(null);
   const sceneRef = useRef<HTMLDivElement>(null);
   const lightRef = useRef<HTMLDivElement>(null);
-  const satFieldRef = useRef<HTMLDivElement>(null);
 
   /* apply theme accent from CONFIG */
   useEffect(() => {
@@ -26,16 +26,29 @@ export default function App() {
     root.setProperty("--accent-glow", `rgba(${r}, ${g}, ${b}, 0.10)`);
   }, []);
 
-  useSceneLoop({ sceneWrapRef, sceneRef, lightRef, satFieldRef });
+  useSceneLoop({ sceneWrapRef, sceneRef, lightRef });
 
   return (
     <>
+      <GridScan
+        sensitivity={CONFIG.gridScan.sensitivity}
+        lineThickness={CONFIG.gridScan.lineThickness}
+        linesColor={CONFIG.gridScan.linesColor}
+        gridScale={CONFIG.gridScan.gridScale}
+        scanColor={CONFIG.gridScan.scanColor}
+        scanOpacity={CONFIG.gridScan.scanOpacity}
+        enablePost
+        bloomIntensity={CONFIG.gridScan.bloomIntensity}
+        chromaticAberration={CONFIG.gridScan.chromaticAberration}
+        noiseIntensity={CONFIG.gridScan.noiseIntensity}
+        scanDuration={CONFIG.gridScan.scanDuration}
+        scanDelay={CONFIG.gridScan.scanDelay}
+      />
+
       <div className="cursor-light" ref={lightRef} aria-hidden="true" />
 
       <main className="scene-wrap" ref={sceneWrapRef} id="sceneWrap">
         <div className="scene" ref={sceneRef}>
-          <div className="sat-field" ref={satFieldRef} aria-hidden="true" />
-
           <div className="main-stack">
             <NamePrism paused={aboutOpen} onOpenAbout={() => setAboutOpen(true)} />
             <div className="links-row">
