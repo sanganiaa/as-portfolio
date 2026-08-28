@@ -111,10 +111,11 @@ export const CONFIG: Config = {
     photo: "assets/profile.jpg",
     initials: "AS",
     bio: [
-      "I'm a computer engineering student at UC San Diego and a hardware engineering intern at Intel, where I work on CPU physical design — floorplanning, timing closure, and getting RTL all the way to GDS.",
-      "I like living where silicon meets software: RTL and verification on one side, full-stack tooling on the other.",
+      "Hi, I'm Aayush, a Computer Engineering student at UC San Diego interested in digital design, computer architecture, and physical design. I'm especially interested in how software and AI can improve the hardware design process: from automating repetitive analysis to helping engineers make faster, better design decisions.",
+      "At Intel, I've been able to explore this intersection through CPU physical design and by building AI-driven tools to automate parts of timing analysis. I want to continue exploring how AI and software can make chip design workflows faster, smarter, and more efficient.",
+      "Outside of engineering, I enjoy playing volleyball, cooking, trying new food, and spending time with friends and family.",
     ],
-    meta: "UC San Diego · Computer Engineering · Class of 2028",
+    meta: "UC San Diego | Computer Engineering | Class of 2027",
   },
 
   motion: {

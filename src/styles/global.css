@@ -305,7 +305,7 @@ body {
 .overlay.open { opacity: 1; pointer-events: auto; }
 
 .about-panel {
-  width: min(600px, calc(100vw - 40px));
+  width: min(680px, calc(100vw - 40px));
   background: linear-gradient(165deg, var(--face), var(--face-2));
   border: 1px solid rgba(255, 255, 255, 0.09);
   border-radius: 16px;
