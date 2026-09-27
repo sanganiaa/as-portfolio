@@ -108,7 +108,7 @@ export const CONFIG: Config = {
   about: {
     eyebrow: "// about",
     heading: "Aayush Sangani",
-    photo: "assets/profile.jpg",
+    photo: "/assets/profile.JPG",
     initials: "AS",
     bio: [
       "Hi, I'm Aayush, a Computer Engineering student at UC San Diego interested in digital design, computer architecture, and physical design. I'm especially interested in how software and AI can improve the hardware design process: from automating repetitive analysis to helping engineers make faster, better design decisions.",
