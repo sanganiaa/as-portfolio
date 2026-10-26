@@ -146,7 +146,6 @@ export function NamePrism({
         {[0, 1, 2, 3].map((k) => (
           <div className="prism-face" data-k={k} key={k}>
             <span className="pf-text" />
-            <span className="pf-hint">{"// about"}</span>
           </div>
         ))}
       </div>
